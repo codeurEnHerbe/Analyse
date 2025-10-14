@@ -24,7 +24,7 @@ jobs:
 
       - name: Installer les dépendances nécessaires
         run: |
-          pip install pandas numpy scikit-learn scipy jupyter nbconvert papermill
+          pip install pandas numpy scikit-learn scipy jupyter nbconvert papermill seaborn matplotlib
 
       - name: Exécuter le notebook et écraser le fichier original
         run: |
