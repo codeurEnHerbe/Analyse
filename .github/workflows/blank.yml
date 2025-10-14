@@ -1,8 +1,8 @@
-name: Exécuter Poids.ipynb régulièrement
+name: Exécuter Poids.ipynb toutes les heures
 
 on:
   schedule:
-    # Exécuter tous les jours à 6h UTC
+    # Exécuter toutes les heures à la minute 0 UTC
     - cron: '0 * * * *'
   workflow_dispatch:  # pour le lancer manuellement aussi
 
@@ -26,15 +26,14 @@ jobs:
         run: |
           pip install pandas numpy scikit-learn scipy jupyter nbconvert papermill
 
-      - name: Exécuter le notebook
+      - name: Exécuter le notebook et écraser le fichier original
         run: |
-          papermill Poids.ipynb output.ipynb
+          papermill Poids.ipynb Poids.ipynb
 
-      # Étape pour enregistrer le résultat dans le dépôt
       - name: Commit du résultat
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add output.ipynb
+          git add Poids.ipynb
           git commit -m "Exécution automatique de Poids.ipynb [skip ci]" || echo "Aucun changement à committer"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
