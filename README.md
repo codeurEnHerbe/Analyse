@@ -65,7 +65,7 @@ Analyse/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Analyse.git
+git clone https://github.com/codeurEnHerbe/Analyse.git
 cd Analyse
 
 # Create virtual environment
@@ -332,9 +332,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/Analyse/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/Analyse/discussions)
-- **Documentation**: [Wiki](https://github.com/yourusername/Analyse/wiki)
+- **Issues**: [GitHub Issues](https://github.com/codeurEnHerbe/Analyse/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/codeurEnHerbe/Analyse/discussions)
+- **Documentation**: [Wiki](https://github.com/codeurEnHerbe/Analyse/wiki)
 
 ---
 
