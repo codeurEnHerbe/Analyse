@@ -1,0 +1,16 @@
+{
+  "download_summary": {
+    "player": "Sard#CASS",
+    "match_depth": 10,
+    "total_matches_downloaded": 263,
+    "total_timelines_downloaded": 263,
+    "unique_players_analyzed": 32,
+    "completion_time": "2025-10-15T04:50:18.642471",
+    "output_directory": "D:\\sardoche\\Analyse\\analysis_data"
+  },
+  "expected_vs_actual": {
+    "expected_matches": "~80 (depth * 8 teammates)",
+    "actual_matches": 263,
+    "efficiency": "328.8%"
+  }
+}
