@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-label="Analyse — Jupyter Notebooks">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121a2a"/>
+      <stop offset="100%" stop-color="#22304d"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8d6ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c8d6ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#c8d6ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#g)" x="0" y="0" width="1600" height="360"/>
+  <g opacity="0.18">
+    <circle cx="200" cy="300" r="180" fill="#ffffff"/>
+    <circle cx="420" cy="180" r="140" fill="#ffffff"/>
+    <circle cx="760" cy="260" r="210" fill="#ffffff"/>
+    <circle cx="1200" cy="160" r="170" fill="#ffffff"/>
+  </g>
+  <rect x="0" y="130" width="1600" height="2" fill="url(#glow)"/>
+  <title>Analyse — Jupyter Notebooks</title>
+    <desc>Repository banner</desc>
+    <text x="50%" y="210" text-anchor="middle"
+        font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        font-size="24" fill="#dbe4ff" letter-spacing="0.3">
+    Analyse — Jupyter Notebooks
+    </text>
+</svg>
