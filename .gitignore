@@ -1,0 +1,7 @@
+__pycache__/
+.vscode/
+.DS_Store
+.env
+.cursorignore
+riot_fetcher/data
+riot_fetcher/riotkits.md
