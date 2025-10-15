@@ -1,40 +1,7 @@
-<p align="center">
-  <img alt="Analyse — Jupyter Notebooks" width="100%" height="auto"
-       src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='360' viewBox='0 0 1600 360' role='img' aria-label='Analyse — Jupyter Notebooks'>
-  <defs>
-    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
-      <stop offset='0%' stop-color='%23121a2a'/>
-      <stop offset='100%' stop-color='%2322304d'/>
-    </linearGradient>
-    <linearGradient id='glow' x1='0' y1='0' x2='1' y2='0'>
-      <stop offset='0%' stop-color='%23c8d6ff' stop-opacity='0.0'/>
-      <stop offset='50%' stop-color='%23c8d6ff' stop-opacity='0.25'/>
-      <stop offset='100%' stop-color='%23c8d6ff' stop-opacity='0.0'/>
-    </linearGradient>
-  </defs>
-  <rect fill='url(#g)' x='0' y='0' width='1600' height='360'/>
-  <g opacity='0.18'>
-    <circle cx='200' cy='300' r='180' fill='%23ffffff'/>
-    <circle cx='420' cy='180' r='140' fill='%23ffffff'/>
-    <circle cx='760' cy='260' r='210' fill='%23ffffff'/>
-    <circle cx='1200' cy='160' r='170' fill='%23ffffff'/>
-  </g>
-  <rect x='0' y='130' width='1600' height='2' fill='url(#glow)'/>
-  <text x='50%' y='160' text-anchor='middle' font-family='Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif'
-        font-size='64' fill='%23ffffff' font-weight='700' letter-spacing='0.5'>Analyse</text>
-  <text x='50%' y='210' text-anchor='middle' font-family='Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif'
-        font-size='22' fill='%23dbe4ff' letter-spacing='0.3'>Jupyter Notebooks</text>
-  <text x='50%' y='250' text-anchor='middle' font-family='ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
-        font-size='16' fill='%23b6c4ff'>Repository: codeurEnHerbe/Analyse</text>
-</svg>"/>
-</p>
+<div align="center">
+  <img src="docs/banner.svg" alt="Analyse — Jupyter Notebooks" width="100%" height="auto">
+</div>
 
-<h1 align="center">Analyse</h1>
-
-<p align="center">
-  Jupyter notebooks stored in this repository.
-</p>
 
 ---
 
