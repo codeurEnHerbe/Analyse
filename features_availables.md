@@ -10,16 +10,18 @@ This document lists **ALL** available data that can be retrieved through the Rio
 - **`gameId`** - Unique match identifier
 - **`gameDuration`** - Match duration in seconds
 - **`gameCreation`** - Match start timestamp
-- **`gameStartTimestamp`** - Exact game start time
-- **`gameEndTimestamp`** - Exact game end time
+- **`gameStartTimestamp`** - Exact game start time (if available)
+- **`gameEndTimestamp`** - Exact game end time (if available)
 - **`gameMode`** - Game mode (CLASSIC, ARAM, etc.)
 - **`gameType`** - Game type (MATCHED_GAME, CUSTOM_GAME, etc.)
 - **`gameVersion`** - Patch version used
-- **`mapId`** - Map identifier (11 = Summoner's Rift)
+- **`mapId`** - Map identifier (11 = Summoner's Rift, 12 = Howling Abyss)
 - **`platformId`** - Platform where match was played
 - **`queueId`** - Queue type (420 = Ranked Solo/Duo, 440 = Ranked Flex, etc.)
 - **`seasonId`** - Season identifier
 - **`tournamentCode`** - Tournament code (if applicable)
+- **`gameEndTimestamp`** - Game end timestamp (if available)
+- **`gameStartTimestamp`** - Game start timestamp (if available)
 
 ### 🏆 **Team Statistics**
 - **`teamId`** - Team identifier (100 = Blue, 200 = Red)
@@ -35,6 +37,8 @@ This document lists **ALL** available data that can be retrieved through the Rio
 - **`baronKills`** - Total Baron Nashor kills
 - **`dragonKills`** - Total Dragon kills
 - **`riftHeraldKills`** - Total Rift Herald kills
+- **`vilemawKills`** - Total Vilemaw kills (Twisted Treeline)
+- **`bans`** - List of banned champions
 - **`totalKills`** - Total team kills
 - **`totalDeaths`** - Total team deaths
 - **`totalAssists`** - Total team assists
@@ -71,6 +75,10 @@ This document lists **ALL** available data that can be retrieved through the Rio
 - **`lane`** - Lane played
 - **`spell1Id`** - First summoner spell
 - **`spell2Id`** - Second summoner spell
+- **`profileIcon`** - Player profile icon ID
+- **`highestAchievedSeasonTier`** - Highest tier achieved in previous season
+- **`bountyLevel`** - Bounty level (0-5)
+- **`bountyGold`** - Bounty gold value
 
 ### ⚔️ **Combat Statistics**
 - **`kills`** - Kills achieved
@@ -199,6 +207,15 @@ This document lists **ALL** available data that can be retrieved through the Rio
 - **`statPerk1`** - Stat rune 2
 - **`statPerk2`** - Stat rune 3
 
+### 🏆 **Challenges Data** (Season 12+)
+- **`challenges`** - Complete challenges data object
+- **`challengesData`** - Individual challenge values
+- **`challengeIds`** - List of challenge IDs
+- **`challengeValues`** - Challenge achievement values
+- **`challengeCategories`** - Challenge categories
+- **`challengeTiers`** - Challenge tier levels
+- **`challengeProgress`** - Challenge progress tracking
+
 ---
 
 ## ⏰ **TIMELINE DATA** (`/lol/match/v5/matches/{matchId}/timeline`)
@@ -209,6 +226,66 @@ This document lists **ALL** available data that can be retrieved through the Rio
 - **`participantFrames`** - Individual player data per frame
 - **`events`** - Game events per frame
 - **`timestamp`** - Frame timestamp
+
+### 🎯 **Timeline Events** (Detailed Event Types)
+- **`CHAMPION_KILL`** - Champion elimination events
+- **`WARD_PLACED`** - Ward placement events
+- **`WARD_KILL`** - Ward destruction events
+- **`BUILDING_KILL`** - Building destruction events
+- **`ELITE_MONSTER_KILL`** - Elite monster kill events
+- **`ITEM_PURCHASED`** - Item purchase events
+- **`ITEM_SOLD`** - Item sale events
+- **`ITEM_DESTROYED`** - Item destruction events
+- **`ITEM_UNDO`** - Item undo events
+- **`SKILL_LEVEL_UP`** - Skill level up events
+- **`LEVEL_UP`** - Champion level up events
+- **`CHAMPION_TRANSFORM`** - Champion transformation events
+- **`GAME_END`** - Game end events
+- **`DRAGON_SOUL_GIVEN`** - Dragon soul events
+- **`CHAMPION_SPECIAL_KILL`** - Special kill events
+- **`TURRET_PLATE_DESTROYED`** - Turret plate destruction
+- **`CHAMPION_KILL_ASSIST`** - Kill assist events
+- **`CHAMPION_KILL_STEAL`** - Kill steal events
+- **`CHAMPION_KILL_MULTI`** - Multi-kill events
+- **`CHAMPION_KILL_PENTA`** - Penta-kill events
+- **`CHAMPION_KILL_QUADRA`** - Quadra-kill events
+- **`CHAMPION_KILL_TRIPLE`** - Triple-kill events
+- **`CHAMPION_KILL_DOUBLE`** - Double-kill events
+- **`CHAMPION_KILL_FIRST_BLOOD`** - First blood events
+- **`CHAMPION_KILL_UNREAL`** - Unreal kill events
+- **`CHAMPION_KILL_ACE`** - Ace events
+- **`CHAMPION_KILL_SHUTDOWN`** - Shutdown events
+- **`CHAMPION_KILL_PERFECT`** - Perfect kill events
+- **`CHAMPION_KILL_DOMINATING`** - Dominating events
+- **`CHAMPION_KILL_MEGA_KILL`** - Mega kill events
+- **`CHAMPION_KILL_ULTRA_KILL`** - Ultra kill events
+- **`CHAMPION_KILL_RAMPAGE`** - Rampage events
+- **`CHAMPION_KILL_KILLING_SPREE`** - Killing spree events
+- **`CHAMPION_KILL_UNSTOPPABLE`** - Unstoppable events
+- **`CHAMPION_KILL_GODLIKE`** - Godlike events
+- **`CHAMPION_KILL_LEGENDARY`** - Legendary events
+- **`CHAMPION_KILL_AN_ALLY_HAS_BEEN_SLAIN`** - Ally slain events
+- **`CHAMPION_KILL_ENEMY_KILLING_SPREE`** - Enemy killing spree events
+- **`CHAMPION_KILL_ENEMY_DOMINATING`** - Enemy dominating events
+- **`CHAMPION_KILL_ENEMY_MEGA_KILL`** - Enemy mega kill events
+- **`CHAMPION_KILL_ENEMY_ULTRA_KILL`** - Enemy ultra kill events
+- **`CHAMPION_KILL_ENEMY_RAMPAGE`** - Enemy rampage events
+- **`CHAMPION_KILL_ENEMY_UNSTOPPABLE`** - Enemy unstoppable events
+- **`CHAMPION_KILL_ENEMY_GODLIKE`** - Enemy godlike events
+- **`CHAMPION_KILL_ENEMY_LEGENDARY`** - Enemy legendary events
+- **`CHAMPION_KILL_ENEMY_ACE`** - Enemy ace events
+- **`CHAMPION_KILL_ENEMY_SHUTDOWN`** - Enemy shutdown events
+- **`CHAMPION_KILL_ENEMY_PERFECT`** - Enemy perfect events
+- **`CHAMPION_KILL_ENEMY_DOMINATING`** - Enemy dominating events
+- **`CHAMPION_KILL_ENEMY_MEGA_KILL`** - Enemy mega kill events
+- **`CHAMPION_KILL_ENEMY_ULTRA_KILL`** - Enemy ultra kill events
+- **`CHAMPION_KILL_ENEMY_RAMPAGE`** - Enemy rampage events
+- **`CHAMPION_KILL_ENEMY_UNSTOPPABLE`** - Enemy unstoppable events
+- **`CHAMPION_KILL_ENEMY_GODLIKE`** - Enemy godlike events
+- **`CHAMPION_KILL_ENEMY_LEGENDARY`** - Enemy legendary events
+- **`CHAMPION_KILL_ENEMY_ACE`** - Enemy ace events
+- **`CHAMPION_KILL_ENEMY_SHUTDOWN`** - Enemy shutdown events
+- **`CHAMPION_KILL_ENEMY_PERFECT`** - Enemy perfect events
 
 ### 🎯 **Per-Minute Statistics**
 - **`goldPerMinute`** - Gold per minute
@@ -382,18 +459,94 @@ This document lists **ALL** available data that can be retrieved through the Rio
 
 ## 📱 **REAL-TIME DATA**
 
-### ⚡ **Live Game Data**
-- **`currentGame`** - Current game information
-- **`liveGameState`** - Live game state
-- **`liveGameEvents`** - Live game events
-- **`liveGameStats`** - Live game statistics
-- **`liveGameTimeline`** - Live game timeline
+### ⚡ **Live Game Data** (`/lol/spectator/v4/active-games/by-summoner/{summonerId}`)
+- **`gameId`** - Current game ID
+- **`gameStartTime`** - Game start timestamp
+- **`gameLength`** - Current game duration
+- **`gameMode`** - Current game mode
+- **`gameType`** - Current game type
+- **`mapId`** - Current map ID
+- **`platformId`** - Platform identifier
+- **`gameQueueConfigId`** - Queue configuration ID
+- **`observers`** - Observer information
+- **`participants`** - Current game participants
+- **`bannedChampions`** - Banned champions list
 
-### 📊 **Spectator Data**
-- **`spectatorMode`** - Spectator mode
-- **`spectatorData`** - Spectator data
-- **`spectatorEvents`** - Spectator events
-- **`spectatorStats`** - Spectator statistics
+### 📊 **Featured Games** (`/lol/spectator/v4/featured-games`)
+- **`gameList`** - List of featured games
+- **`clientRefreshInterval`** - Refresh interval
+- **`featuredGames`** - Featured games data
+- **`gameData`** - Individual game data
+- **`participantData`** - Participant information
+- **`bannedChampions`** - Banned champions
+
+### 🏆 **Clash Tournaments** (`/lol/clash/v1/`)
+- **`tournaments`** - Available tournaments
+- **`tournamentId`** - Tournament identifier
+- **`tournamentName`** - Tournament name
+- **`tournamentTag`** - Tournament tag
+- **`tournamentThemeId`** - Tournament theme
+- **`tournamentNameKey`** - Tournament name key
+- **`tournamentNameKeySecondary`** - Secondary name key
+- **`schedule`** - Tournament schedule
+- **`registrationTime`** - Registration time
+- **`startTime`** - Tournament start time
+- **`cancelled`** - Cancellation status
+- **`teamId`** - Team identifier
+- **`teamName`** - Team name
+- **`teamTag`** - Team tag
+- **`teamLogo`** - Team logo
+- **`teamAbbreviation`** - Team abbreviation
+- **`players`** - Team players
+- **`captain`** - Team captain
+- **`altCaptain`** - Alternative captain
+- **`tier`** - Team tier
+- **`summonerId`** - Player summoner ID
+- **`position`** - Player position
+- **`role`** - Player role
+
+---
+
+## 🏟️ **TOURNAMENT & LOBBY DATA**
+
+### 🎮 **Lobby Events** (`/lol/match/v5/matches/{matchId}/lobby-events`)
+- **`eventType`** - Type of lobby event
+- **`timestamp`** - Event timestamp
+- **`summonerId`** - Summoner involved
+- **`summonerName`** - Summoner name
+- **`championId`** - Champion selected
+- **`championName`** - Champion name
+- **`teamId`** - Team identifier
+- **`position`** - Player position
+- **`role`** - Player role
+- **`lobbyState`** - Lobby state
+- **`gameState`** - Game state
+- **`queueType`** - Queue type
+- **`gameMode`** - Game mode
+- **`mapId`** - Map identifier
+- **`platformId`** - Platform identifier
+
+### 🏆 **Tournament Data**
+- **`tournamentCode`** - Tournament code
+- **`tournamentId`** - Tournament identifier
+- **`tournamentName`** - Tournament name
+- **`tournamentTag`** - Tournament tag
+- **`tournamentThemeId`** - Tournament theme
+- **`tournamentNameKey`** - Tournament name key
+- **`tournamentNameKeySecondary`** - Secondary name key
+- **`schedule`** - Tournament schedule
+- **`registrationTime`** - Registration time
+- **`startTime`** - Tournament start time
+- **`cancelled`** - Cancellation status
+- **`teamId`** - Team identifier
+- **`teamName`** - Team name
+- **`teamTag`** - Team tag
+- **`teamLogo`** - Team logo
+- **`teamAbbreviation`** - Team abbreviation
+- **`players`** - Team players
+- **`captain`** - Team captain
+- **`altCaptain`** - Alternative captain
+- **`tier`** - Team tier
 
 ---
 
@@ -496,13 +649,43 @@ for participant in participants:
 
 The Riot API provides **incredibly rich data** for League of Legends analysis:
 
-- **🎮 100+ individual player statistics** per match
-- **📊 50+ team statistics** per match  
-- **⏰ Frame-by-frame timeline data** for detailed analysis
+- **🎮 150+ individual player statistics** per match
+- **📊 60+ team statistics** per match  
+- **⏰ Frame-by-frame timeline data** with 50+ event types
 - **🏆 Complete ranked and mastery information**
 - **👥 Teammate and team synergy data**
 - **🌍 Multi-regional support** for global analysis
 - **📈 Advanced performance metrics** and analytics
+- **🏆 Challenges data** (Season 12+)
+- **📱 Real-time spectator data** for live games
+- **🏟️ Tournament and Clash data** for competitive analysis
+- **🎮 Lobby events** for pre-game analysis
+- **⏰ Detailed timeline events** with kill streaks and special events
+
+### 📊 **Data Categories Covered:**
+- **Match Information** (25+ fields)
+- **Team Statistics** (30+ fields)
+- **Participant Data** (100+ fields)
+- **Combat Statistics** (20+ fields)
+- **Gold & Economy** (15+ fields)
+- **Damage Statistics** (25+ fields)
+- **Defensive Statistics** (10+ fields)
+- **Vision & Map Control** (10+ fields)
+- **Farming & Objectives** (15+ fields)
+- **Experience & Leveling** (10+ fields)
+- **Items & Build** (15+ fields)
+- **Runes & Masteries** (15+ fields)
+- **Challenges Data** (10+ fields)
+- **Timeline Data** (50+ event types)
+- **League & Ranked** (20+ fields)
+- **Champion Data** (15+ fields)
+- **Team & Teammate** (20+ fields)
+- **Analytics & Metrics** (15+ fields)
+- **Match Analysis** (10+ fields)
+- **Regional & Platform** (10+ fields)
+- **Game Mode Specific** (20+ fields)
+- **Real-time Data** (30+ fields)
+- **Tournament & Lobby** (25+ fields)
 
 This data can be used for:
 - **📊 Performance analysis** and improvement
@@ -512,5 +695,8 @@ This data can be used for:
 - **📈 Statistical research** and data science
 - **🎮 Coaching** and player development
 - **📱 Application development** and tools
+- **🏟️ Tournament analysis** and competitive insights
+- **⏰ Real-time game tracking** and live analysis
+- **🏆 Challenge tracking** and achievement analysis
 
-**The possibilities are endless!** 🚀
+**The possibilities are truly endless!** 🚀
