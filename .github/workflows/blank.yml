@@ -24,7 +24,7 @@ jobs:
 
       - name: Installer les dépendances nécessaires
         run: |
-          pip install pandas numpy scikit-learn scipy seaborn matplotlib torch
+          pip install pandas numpy scikit-learn scipy seaborn matplotlib torch jupyter nbconvert papermill
 
       - name: Exécuter le notebook et écraser le fichier original
         run: |
