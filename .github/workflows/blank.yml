@@ -3,7 +3,7 @@ name: Exécuter Poids.ipynb toutes les heures
 on:
   schedule:
     # Exécuter toutes les heures à la minute 0 UTC
-    - cron: '0 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:  # pour le lancer manuellement aussi
 
 permissions:
