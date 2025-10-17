@@ -27,6 +27,8 @@ jobs:
           pip install pandas numpy scikit-learn scipy seaborn matplotlib torch gspread google-auth jupyter nbconvert papermill
 
       - name: Exécuter le notebook et écraser le fichier original
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: |
           papermill Poids.ipynb Poids.ipynb
 
