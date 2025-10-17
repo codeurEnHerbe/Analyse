@@ -21,7 +21,7 @@ jobs:
 
       - name: Installer les dépendances nécessaires
         run: |
-          pip install pandas numpy scikit-learn scipy seaborn matplotlib torch gspread google-auth jupyter nbconvert papermill
+          pip install pandas numpy seaborn matplotlib torch scikit-learn gspread google-auth jupyter nbconvert papermill
 
       - name: Exécuter le notebook et écraser le fichier original
         env:
