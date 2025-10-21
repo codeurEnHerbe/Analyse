@@ -2,8 +2,7 @@ name: Exécuter Poids.ipynb toutes les heures
 
 on:
   workflow_dispatch:  # pour lancer manuellement
-  schedule:
-    - cron: "0 * * * *"  # toutes les heures
+ 
 
 permissions:
   contents: read  # plus besoin de write si pas de push
